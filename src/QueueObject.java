@@ -39,15 +39,10 @@ public class QueueObject<T> {
         }
         public T dequeue(){//remove the top node of the queue and return it
             QueueNode<T> currNode = headNode;
-            headNode=currNode.getNext().getNext();
+            headNode=currNode.getNext();
             size--;
 
             return currNode.getNext().get_data();
         }
 
-//        public void test(String eq){
-//            String[] newEq = eq.split(" "); // splits up the String into a list of its components
-//            System.out.println(eq.isEmpty());//should print out false
-//
-//        }
 }
